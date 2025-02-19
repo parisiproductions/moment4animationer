@@ -98,9 +98,7 @@
 /* Media queries*/
 /* Skärmar mindre än eller lika med 1024px */
 @media (max-width: 1024px) {
-
   .welcome-section {
-
     gap: 2rem;
   }
 
@@ -117,7 +115,7 @@ margin-top: 3rem;
 @media (max-width: 599px) {
 
   .welcome-section {
-  
+    background-image: url("../images/perser.webp?as=webp&width=400") no-repeat center/contain;
     gap: 1.7rem;
 
   }

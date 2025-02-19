@@ -287,6 +287,7 @@ nav ul li a {
 }
 @media (max-width: 599px) {
   .welcome-section {
+    background-image: url("../images/perser.webp?as=webp&width=400") no-repeat center/contain;
     gap: 1.7rem;
   }
   .button-container {
