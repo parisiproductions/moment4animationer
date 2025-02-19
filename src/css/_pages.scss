@@ -1,0 +1,161 @@
+@use "variables";
+@use "mixins";
+
+
+
+.logo{
+  padding: 1rem;
+}
+
+/*Standardlogo*/
+.logo img{
+  width: 70%; 
+  height: auto;
+}
+
+
+
+
+/*Startsidan*/
+
+.welcome-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), 
+              url("../images/perser.webp") no-repeat center/cover;
+  display: flex;
+  gap: 3.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+    h1, h2{
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+
+    }
+}
+
+
+    .button-container {
+        display: flex;
+        gap: 3rem; 
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+  
+
+
+.info-section1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.8;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1300px;
+    margin: auto;
+
+  
+    .text-block {
+        flex: 1;
+    
+      h1 {
+        margin-bottom: 1rem;
+        font-size: clamp(1.5rem, 5vw, 3rem);
+
+      
+
+      p {
+        margin-bottom: 1rem;
+       
+      
+    }}}
+
+
+    .image-block {
+     padding-top: 4rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+    }
+
+}
+
+
+.info-section2 {
+    @extend .info-section1;
+    flex-direction: row-reverse;  
+}
+
+
+
+/* Media queries*/
+/* Skärmar mindre än eller lika med 1024px */
+@media (max-width: 1024px) {
+
+
+  .welcome-section {
+    position: relative;
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), 
+                url("../images/perser.webp") no-repeat center/cover;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+  
+
+  }
+
+
+
+    .info-section1, .info-section2 {
+        flex-direction: column;
+margin-top: 3rem;
+        padding: 2rem;   
+    }
+
+
+}
+
+
+@media (max-width: 599px) {
+
+
+  .welcome-section {
+    position: relative;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), 
+                url("../images/perser.webp") no-repeat center/cover;
+    display: flex;
+    gap: 1.7rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+  }
+
+
+
+
+
+
+
+    .button-container {
+        flex-direction: column;
+
+      }
+}
