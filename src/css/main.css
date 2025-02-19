@@ -215,8 +215,7 @@ nav ul li a {
 /*Startsidan*/
 .welcome-section {
   position: relative;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), url("../images/perser.webp") no-repeat center/cover;
   display: flex;
   gap: 3.5rem;
@@ -278,8 +277,6 @@ nav ul li a {
 /* Skärmar mindre än eller lika med 1024px */
 @media (max-width: 1024px) {
   .welcome-section {
-    height: 80vh;
-    width: 100%;
     gap: 2rem;
   }
   .info-section1, .info-section2 {
@@ -290,8 +287,6 @@ nav ul li a {
 }
 @media (max-width: 599px) {
   .welcome-section {
-    height: 60vh;
-    width: 100%;
     gap: 1.7rem;
   }
   .button-container {
