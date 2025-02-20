@@ -48,8 +48,8 @@
                 <li><a href="#">Adoption</a></li>
                 <li><a href="#">Meny</a></li>
                 <li><a href="#">Kontakt</a></li>
-                <li><a href="animering.html">Animering</a></li>
-                <li><a href="#" class="nav-link-active">Sass</a></li>
+                <li><a href="#" class="nav-link-active">Animering</a></li>
+                <li><a href="sass.html">Sass</a></li>
     
 
             </ul>
@@ -57,31 +57,31 @@
     </header>
     
     <main>
-        <section class="info-section1">
-            <div class="text-block">
-                <h1>Sass</h1>
+   
 
-                <p>
-    Att börja arbeta med Sass har varit en utmaning, särskilt eftersom det är ett så stort område med många funktioner att lära sig. Det kräver ett annat sätt att tänka jämfört med ren CSS, vilket har inneburit en omställning.
-
-Trots detta ser jag många fördelar, särskilt när det gäller att minska redundant kod och skapa mer strukturerade och effektiva stilmallar. Möjligheten att kunna använda variabler, mixins och nesting gör att koden blir lättare att underhålla och mer dynamisk när man vill ändra och uppdatera. Det finns även många kraftfulla funktioner som kan göra arbetet både smidigare och mer anpassningsbart.
-
-Det är fortfarande lite svårt att skilja på olika funktioner och när man ska använda vad, men jag tror att detta kommer bli tydligare med tiden.
-
-                </p>
-    </div>
-
-                <div>
+        <div class="catCard">
+            <picture>
+                <!-- Bild för desktop skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=520" media="(min-width: 1024px)" type="image/webp">
+        
+                <!-- Bild för tablet skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=420" media="(min-width: 600px) and (max-width: 1023px)" type="image/webp">
+        
+                <!-- Bild för mobil skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=320" media="(max-width: 599px)" type="image/webp">
                 
-            <img src="../images/sass.png" alt="Sass" width="200" height="150" loading="lazy">
-                   
-                </div>
-
-
-               
+                <!-- Fallback -->
+                <img class="catCard-img" src="../images/red.jpg?width=620" alt="En röd katt på ett bord" width="500" height="700" loading="lazy">
+            </picture>
+        
+            <div class="cardtext">
+                <h2 class="card-title">Victor</h2>
+                <p class="card-text">Victor letar efter sitt "för-alltid-hem". Han är en busig kille med hjärtat på rätt ställe. En riktig charmör!</p>
+                <a href="#" class="button">Läs mer</a>
             </div>
+        </div>
 
-    
+
 </main>
     
 
