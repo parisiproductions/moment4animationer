@@ -48,6 +48,30 @@
   }
   100% {
     transform: scale(1.2, 1.2);
+    border-radius: 10%;
+  }
+}
+@keyframes cat-jump {
+  0%, 100% {
+    transform: translateX(-30%) translateY(60px) scale(0.8);
+  }
+  20% {
+    transform: translateX(-50%) translateY(-30px) scale(0.9);
+  }
+  40% {
+    transform: translateX(-60%) translateY(-50px) scale(0.95) rotate(10deg);
+  }
+  60% {
+    transform: translateX(-40%) translateY(-60px) scale(1);
+  }
+  80% {
+    transform: translateX(-20%) translateY(-40px) scale(0.95);
+  }
+  90% {
+    transform: translateX(-50%) translateY(-50px) scale(1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(20px) scale(0.8);
   }
 }
 /*Importerar alla partials*/
@@ -281,6 +305,7 @@ nav ul li a {
 }
 
 /*Animering - sida*/
+/*Katt card*/
 .catCard {
   width: 100%;
   margin: 0 auto;
@@ -304,9 +329,10 @@ nav ul li a {
   width: 100%;
   height: auto;
   max-width: 100%;
+  transition: transform 3s ease-in-out;
 }
 .catCard-img:hover {
-  animation: transformPicture 3s 0.5s ease-in-out infinite alternate;
+  animation: transformPicture 3s forwards;
 }
 .catCard .cardtext {
   padding: 1rem;
@@ -321,6 +347,28 @@ nav ul li a {
 .catCard .cardtext .card-text {
   font-size: 1rem;
   margin-bottom: 1.5rem;
+}
+
+/*Katt i kartong*/
+.cardboard-cat {
+  position: relative;
+  width: 475px;
+  margin: auto;
+}
+
+.cardboard {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.cat {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  z-index: 1;
+  animation: cat-jump 7s 3s infinite linear;
 }
 
 /* Media queries*/
@@ -368,6 +416,13 @@ nav ul li a {
   }
   .cardtext .card-text {
     font-size: 0.85rem;
+  }
+  .cardboard-cat {
+    width: 320px;
+  }
+  .cat {
+    width: 40%;
+    bottom: 50px;
   }
 }
 * {
