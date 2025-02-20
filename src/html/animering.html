@@ -59,12 +59,29 @@
     <main>
    
 
-
-
-
-
+        <div class="catCard">
+            <picture>
+                <!-- Bild för desktop skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=520" media="(min-width: 1024px)" type="image/webp">
         
-    
+                <!-- Bild för tablet skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=420" media="(min-width: 600px) and (max-width: 1023px)" type="image/webp">
+        
+                <!-- Bild för mobil skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=320" media="(max-width: 599px)" type="image/webp">
+                
+                <!-- Fallback -->
+                <img class="catCard-img" src="../images/red.jpg?width=620" alt="En röd katt på ett bord" width="500" height="700" loading="lazy">
+            </picture>
+        
+            <div class="cardtext">
+                <h2 class="card-title">Victor</h2>
+                <p class="card-text">Victor letar efter sitt "för-alltid-hem". Han är en busig kille med hjärtat på rätt ställe. En riktig charmör!</p>
+                <a href="#" class="button">Läs mer</a>
+            </div>
+        </div>
+
+
 </main>
     
 
