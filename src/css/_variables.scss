@@ -7,6 +7,7 @@ $light-pink: #f5dae4;
 $white: #f3f3f3;
 $pink-white:  #f7ebf2;
 $cerise:  #86113c;
+$lighter-cerise: #e9417e;
 $black: #111111;
 $shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
@@ -17,6 +18,8 @@ $main-color: $pink-white;
 $button-color: saturate($cerise, 20%);
 $button-text: $white;
 
+$button-click: $lighter-cerise;
+
 $headings-color: darken($background-color, 40%);
 $paragraph-color: $black;
 
@@ -26,7 +29,6 @@ $menu-link-color: $black;
 
 :root {
     --background-color: #f5dae4;
-    // --text-color: #111111; 
     --heading-color: #d62264;;
     --main-color: #f7ebf2;
 }

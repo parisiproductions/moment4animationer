@@ -99,6 +99,20 @@
 
 /*Animering - sida*/
 
+.animering-heading{
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+  max-width: 600px;
+  background-color: variables.$white;
+  box-shadow: variables.$shadow;
+}
+
+
+
+/*Katt card*/
 
 .catCard {
   width: 100%;
@@ -106,7 +120,6 @@
   margin-top: 2rem;
   max-width: 500px; 
   border-radius: 10px;
-
   box-shadow: variables.$shadow;
   background: variables.$white;
   text-align: center;
@@ -125,10 +138,11 @@
       width: 100%;
       height: auto;
       max-width: 100%; 
+ 
       
       
 &:hover{
-  animation: transformPicture 3s 0.5s ease-in-out infinite alternate;
+  animation: transformPicture 3s forwards;
 }
   }
   
@@ -149,7 +163,86 @@
           margin-bottom: 1.5rem;
       }
   }
+
 }
+
+
+/*Katt i kartong*/
+
+.cardboard-cat{
+  position: relative;
+  width: 475px; 
+  margin: auto;
+}
+
+.cardboard {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.cat {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  opacity: 0;
+  z-index: 1;
+  animation: cat-jump 7s 3s infinite linear;
+}
+
+.button-container{
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+
+@property --color-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #{variables.$button-color}; 
+}
+
+@property --color-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #{variables.$button-click}; 
+}
+
+
+.cool-button {
+    --color-1: #{variables.$button-color};  
+    --color-2: #{variables.$button-click};  
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border: 0;
+    font-size: 1rem;
+    color: variables.$button-text;
+    background-color: var(--color-1); 
+    border-radius: 15px;
+    transition: background 0.2s ease-in-out, transform 0.3s ease-in-out;
+
+    &:hover {
+      background: linear-gradient(90deg, var(--color-1), var(--color-2), var(--color-1)); 
+      background-size: 200% 100%; 
+      animation: move-gradient 3s linear infinite; 
+      box-shadow: variables.$shadow;
+  }
+    
+    &.clicked {
+        animation: button-click 3s ease-in-out;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 /* Media queries*/
@@ -180,6 +273,7 @@ margin-top: 3rem;
       }
   }
 
+  
 }
 
 
@@ -219,6 +313,16 @@ margin-top: 3rem;
             font-size: 0.85rem;
         }
     }
+
+    .cardboard-cat {
+      width: 320px;
+  }
+  .cat {
+    width: 40%;
+      bottom: 50px;
+    
+  }
+
     }
 
 

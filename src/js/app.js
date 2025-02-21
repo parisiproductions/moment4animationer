@@ -17,3 +17,19 @@ function toggleMenu() {
         navMenuEl.style.display = "none";
     }
 }
+
+
+
+//Knapp som lyssnar på klick och ändrar utseende
+
+document.querySelector(".cool-button").addEventListener("click", function () {
+    let button = this;
+    
+    // Lägg till klassen
+    button.classList.add("clicked");
+
+    // Ta bort klassen efter animationen är klar så att den kan köras igen
+    setTimeout(() => {
+        button.classList.remove("clicked");
+    }, 3000); 
+});
