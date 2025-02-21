@@ -53,25 +53,45 @@
 }
 @keyframes cat-jump {
   0%, 100% {
-    transform: translateX(-30%) translateY(60px) scale(0.8);
+    transform: translateX(-30%) translateY(60px) scale(0.7);
+    opacity: 1;
   }
   20% {
-    transform: translateX(-50%) translateY(-30px) scale(0.9);
+    transform: translateX(-50%) translateY(-30px) scale(1);
   }
   40% {
-    transform: translateX(-60%) translateY(-50px) scale(0.95) rotate(10deg);
-  }
-  60% {
-    transform: translateX(-40%) translateY(-60px) scale(1);
-  }
-  80% {
-    transform: translateX(-20%) translateY(-40px) scale(0.95);
+    transform: translateX(-60%) translateY(-100px) scale(1);
   }
   90% {
-    transform: translateX(-50%) translateY(-50px) scale(1);
+    transform: translateX(-50%) translateY(-70px) scale(1);
   }
   100% {
     transform: translateX(-50%) translateY(20px) scale(0.8);
+  }
+}
+@keyframes move-gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100% 20%;
+  }
+}
+@keyframes button-click {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 /*Importerar alla partials*/
@@ -305,6 +325,17 @@ nav ul li a {
 }
 
 /*Animering - sida*/
+.animering-heading {
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+  max-width: 600px;
+  background-color: #f3f3f3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /*Katt card*/
 .catCard {
   width: 100%;
@@ -329,7 +360,6 @@ nav ul li a {
   width: 100%;
   height: auto;
   max-width: 100%;
-  transition: transform 3s ease-in-out;
 }
 .catCard-img:hover {
   animation: transformPicture 3s forwards;
@@ -367,8 +397,48 @@ nav ul li a {
   position: absolute;
   bottom: 110px;
   left: 50%;
+  opacity: 0;
   z-index: 1;
   animation: cat-jump 7s 3s infinite linear;
+}
+
+.button-container {
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+@property --color-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #950238;
+}
+@property --color-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e9417e;
+}
+.cool-button {
+  --color-1: #950238;
+  --color-2: #e9417e;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  border: 0;
+  font-size: 1rem;
+  color: #f3f3f3;
+  background-color: var(--color-1);
+  border-radius: 15px;
+  transition: background 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+.cool-button:hover {
+  background: linear-gradient(90deg, var(--color-1), var(--color-2), var(--color-1));
+  background-size: 200% 100%;
+  animation: move-gradient 3s linear infinite;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.cool-button.clicked {
+  animation: button-click 3s ease-in-out;
 }
 
 /* Media queries*/
